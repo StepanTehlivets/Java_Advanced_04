@@ -15,8 +15,9 @@
 			href="login.jsp">login</a>
 	</p>
 	<p>Take a look at our journals</p>
-
-
+	<form action="ShowJournalsServlet" method="get">
+	<input type="submit" value="Show">
+	</form>
 
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>

@@ -4,4 +4,45 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>registration</servlet-name>
+    <servlet-class>ua.academy.lgs.RegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registration</servlet-name>
+    <url-pattern>/registration</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>ua.academy.lgs.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>JournalAddServlet</servlet-name>
+    <servlet-class>ua.academy.lgs.JournalAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JournalAddServlet</servlet-name>
+    <url-pattern>/JournalAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowJournalsServlet</servlet-name>
+    <servlet-class>ua.academy.lgs.ShowJournalsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowJournalsServlet</servlet-name>
+    <url-pattern>/ShowJournalsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddToCartServlet</servlet-name>
+    <servlet-class>ua.academy.lgs.AddToCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddToCartServlet</servlet-name>
+    <url-pattern>/AddToCartServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -27,5 +27,8 @@ public class UserService {
 	public User getUser(String email) {
 		return listOfUsers.stream().filter(user -> user.getEmail().equals(email)).findAny().orElse(null);
 	}
+	public User getUserByName(String name) {
+		return listOfUsers.stream().filter(user -> user.getFirstName().equals(name)).findAny().orElse(null);
+	}
 
 }

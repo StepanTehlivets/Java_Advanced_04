@@ -26,8 +26,7 @@ public class RegistrationServlet extends HttpServlet {
 		String password = request.getParameter("password");
 
 		userService.saveUser(new User(firstName,lastName,email,password));
-		request.setAttribute("firstName", firstName);
-		request.getRequestDispatcher("personalArea.jsp").forward(request, response);
+		request.getRequestDispatcher("login.jsp").forward(request, response);
 		
 	}
 
