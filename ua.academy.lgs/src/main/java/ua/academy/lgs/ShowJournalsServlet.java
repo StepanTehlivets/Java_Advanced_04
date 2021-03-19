@@ -28,10 +28,11 @@ public class ShowJournalsServlet extends HttpServlet {
             response.getWriter().print("AddToCartServlet");
             response.getWriter().print(" method=");
             response.getWriter().print("post");
-            response.getWriter().print("><input type=");
+            response.getWriter().print(" ><input type=");
             response.getWriter().print("submit " );
-            response.getWriter().print("value=");
-            response.getWriter().print("Add to Cart");
+            response.getWriter().print( "value=");
+            response.getWriter().print("Add");
+            request.setAttribute("name",journal.getName());
             response.getWriter().print("> </form>");
 
         }

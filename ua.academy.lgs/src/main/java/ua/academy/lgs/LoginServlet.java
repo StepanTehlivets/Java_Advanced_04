@@ -21,7 +21,6 @@ public class LoginServlet extends HttpServlet {
         User user =userService.getUser(login);
         if(login.equals("admin@admin")&&password.equals("admin")){
             request.getRequestDispatcher("adminPersonalArea.jsp").forward(request,response);
-
         }
         if(user == null){
             request.getRequestDispatcher("login.jsp").forward(request,response);

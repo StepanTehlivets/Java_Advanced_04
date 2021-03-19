@@ -30,5 +30,8 @@ public class UserService {
 	public User getUserByName(String name) {
 		return listOfUsers.stream().filter(user -> user.getFirstName().equals(name)).findAny().orElse(null);
 	}
+	public User getUserByLogged(Boolean isLogged) {
+		return listOfUsers.stream().filter(user -> user.isLogged()).findAny().orElse(null);
+	}
 
 }

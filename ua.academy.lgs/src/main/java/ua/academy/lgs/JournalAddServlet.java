@@ -16,7 +16,7 @@ public class JournalAddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name =request.getParameter("name");
-        Double price = Double.parseDouble(request.getParameter("price"));
+        double price = Double.parseDouble(request.getParameter("price"));
        journalService.saveJournal(new Journal(name,price));
         response.getWriter().print(  "<!DOCTYPE html>");
         response.getWriter().print(  "<html>");
