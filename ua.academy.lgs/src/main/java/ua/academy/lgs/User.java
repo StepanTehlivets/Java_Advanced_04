@@ -9,7 +9,6 @@ public class User {
     private String email;
     private String password;
     private boolean isLogged;
-    private Cart cart;
 
 
     public User(String firstName, String lastName, String email, String password) {
@@ -60,13 +59,6 @@ public class User {
         isLogged = logged;
     }
 
-	public Cart getCart() {
-		return cart;
-	}
-
-	public void setCart(Cart cart) {
-		this.cart = cart;
-	}
 
 	@Override
     public String toString() {
