@@ -5,11 +5,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Personal Area</title>
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<h3>Hi. Welcome to your personal Area, ${userName}</h3>
+	<h3>Hi. Welcome to your personal Area</h3>
+
+	<form action="ShowSubscribedJournalsServlet" method="get">
+		<input type="submit" value="Show">
+	</form>
+
 	<a href="index.jsp">Back to homepage</a>
 	<jsp:include page="footer.jsp"></jsp:include>
 

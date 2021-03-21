@@ -45,4 +45,21 @@
     <servlet-name>AddToCartServlet</servlet-name>
     <url-pattern>/AddToCartServlet</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ShowSubscribedJournalsServlet</servlet-name>
+    <servlet-class>ua.academy.lgs.ShowSubscribedJournalsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowSubscribedJournalsServlet</servlet-name>
+    <url-pattern>/ShowSubscribedJournalsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RemoveFromCartServlet</servlet-name>
+    <servlet-class>ua.academy.lgs.RemoveFromCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveFromCartServlet</servlet-name>
+    <url-pattern>/RemoveFromCartServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

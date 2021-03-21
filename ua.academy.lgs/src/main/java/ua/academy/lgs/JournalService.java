@@ -6,6 +6,7 @@ import java.util.List;
 public class JournalService {
     private List<Journal> listOfJournals = new ArrayList<>();
     private List<Journal> journalsInCart = new ArrayList<>();
+    private double toPay;
     private static JournalService journalService;
 
     private JournalService() {}
@@ -36,4 +37,11 @@ public class JournalService {
         journalsInCart.add(journal);
     }
 
+    public double getToPay() {
+        return toPay;
+    }
+
+    public void setToPay(double toPay) {
+        this.toPay = toPay;
+    }
 }

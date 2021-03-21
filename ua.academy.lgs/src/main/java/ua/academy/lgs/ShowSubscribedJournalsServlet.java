@@ -1,13 +1,13 @@
 package ua.academy.lgs;
 
-        import javax.servlet.*;
-        import javax.servlet.http.*;
-        import javax.servlet.annotation.*;
-        import java.io.IOException;
-        import java.util.Iterator;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+import java.io.IOException;
+import java.util.Iterator;
 
-@WebServlet(name = "ShowJournalsServlet", value = "/ShowJournalsServlet")
-public class ShowJournalsServlet extends HttpServlet {
+@WebServlet(name = "ShowSubscribedJournalsServlet", value = "/ShowSubscribedJournalsServlet")
+public class ShowSubscribedJournalsServlet extends HttpServlet {
     JournalService journalService=JournalService.getJournalService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -17,7 +17,7 @@ public class ShowJournalsServlet extends HttpServlet {
         response.getWriter().print(  "<title>JournalAdded</title>");
         response.getWriter().print(  "</head>");
         response.getWriter().print(  "<body>");
-        Iterator iterator = journalService.getListOfJournals().iterator();
+        Iterator iterator = journalService.getJournalsInCart().iterator();
         while(iterator.hasNext()){
 
 
@@ -25,13 +25,13 @@ public class ShowJournalsServlet extends HttpServlet {
 
             response.getWriter().print("<p name="+":"+"journalName"+">"+journal.getName() +" with price "+ journal.getPrice());
             response.getWriter().print("<form action=");
-            response.getWriter().print("AddToCartServlet");
+            response.getWriter().print("RemoveFromCartServlet");
             response.getWriter().print(" method=");
             response.getWriter().print("post");
             response.getWriter().print(" ><input type=\"hidden\" name=\"name\" value= "+journal.getName()+"><input type=");
             response.getWriter().print("submit " );
             response.getWriter().print( "value=");
-            response.getWriter().print("Add");
+            response.getWriter().print("Remove");
             request.setAttribute("name",journal.getName());
             response.getWriter().print("> </form>");
 
